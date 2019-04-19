@@ -21,9 +21,9 @@ So you got a new computer or lost your old settings. How do you set up your stuf
 - [ ] Terminal setup
     - [ ] Install iTerm2
     - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-    - [ ] Install fzyfinder or whatever
+    - [ ] Install [fzf and enable fuzzy completions](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
     - [ ] Load dotfiles (.bashrc, .zshrc, .zshenv)
-    - [ ] Install ripgrep
+    - [ ] Install [ripgrep](https://github.com/BurntSushi/ripgrep) (faster, more modern grep)
     - [ ] Something with ssh keys?
     - [ ] Set font to [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf)
     - [ ] Set up Touch ID auth for sudo: http://osxdaily.com/2017/11/22/use-touch-id-sudo-mac/
