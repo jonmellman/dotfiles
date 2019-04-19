@@ -1,0 +1,37 @@
+So you got a new computer or lost your old settings. How do you set up your stuff like Jon!?
+
+- [ ] System setup
+    - [ ] [Optimize system key repeat](https://apple.stackexchange.com/a/83923)
+     and trackpad tracking speed
+    - [ ] Hide dock and update animation speed
+    - [ ] Install [Spectacle](https://www.spectacleapp.com/) for window management
+    - [ ] Install [Flycut](https://itunes.apple.com/us/app/flycut-clipboard-manager/id442160987?mt=12) for clipboard management
+        * Note: If you have issues with Spectacle and Flycut hotkeys clashing, you can disable Spectactle when Flycut is focused.
+    - [ ] [Rebind caps lock to escape](https://stackoverflow.com/a/40254864)
+    - [ ] Accessibility > enable "scroll gesture with modifier keys to zoom"
+    - [ ] Install font [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf). This is [Inconsolata](https://fonts.google.com/specimen/Inconsolata?selection.family=Inconsolata), but with ligatures.
+    - [ ] Better touchbar: https://github.com/niw/HapticKey
+    - [ ] Install Homebrew: https://brew.sh/
+- [ ] Editor setup
+    - [ ] Install VS Code
+    - [ ] Download snippets
+    - [ ] Download keybindings 
+    - [ ] Download extensions
+    - [ ] Set font to "Ligconsolata"
+- [ ] Terminal setup
+    - [ ] Install iTerm2
+    - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+    - [ ] Install fzyfinder or whatever
+    - [ ] Load dotfiles (.bashrc, .zshrc, .zshenv)
+    - [ ] Install ripgrep
+    - [ ] Something with ssh keys?
+    - [ ] Set font to [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf)
+    - [ ] Set up Touch ID auth for sudo: http://osxdaily.com/2017/11/22/use-touch-id-sudo-mac/
+        * If this doesn't work in your iTerm: https://gitlab.com/gnachman/iterm2/issues/7608
+    - [ ] Set up Touch ID auth for SSH: https://github.com/sekey/sekey
+- [ ] NodeJS setup
+    - [ ] Install [nvm](https://github.com/creationix/nvm)
+    - [ ] Install the latest stable version of Node: `nvm install --lts`
+- [ ] Download LastPass
+- [ ] Set up Chrome
+    - [ ] Settings > Manage Search Engines
