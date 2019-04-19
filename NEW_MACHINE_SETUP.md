@@ -19,12 +19,11 @@ So you got a new computer or lost your old settings. How do you set up your stuf
     - [ ] Download extensions
     - [ ] Set font to "Ligconsolata"
 - [ ] Terminal setup
-    - [ ] Install iTerm2
+    - [ ] Install [iTerm2](https://www.iterm2.com/)
     - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
     - [ ] Install [fzf and enable fuzzy completions](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
     - [ ] Load dotfiles (.bashrc, .zshrc, .zshenv)
-    - [ ] Install [ripgrep](https://github.com/BurntSushi/ripgrep) (faster, more modern grep)
-    - [ ] Something with ssh keys?
+    - [ ] Install [ripgrep](https://github.com/BurntSushi/ripgrep) for a faster, more modern grep
     - [ ] Set font to [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf)
     - [ ] Set up Touch ID auth for sudo: http://osxdaily.com/2017/11/22/use-touch-id-sudo-mac/
         * If this doesn't work in your iTerm: https://gitlab.com/gnachman/iterm2/issues/7608
