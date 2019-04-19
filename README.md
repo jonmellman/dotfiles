@@ -2,6 +2,10 @@
 
 This repository contains the settings, preferences, and tools I've come to rely on after using a Macbook Pro for NodeJS development for over 5 years.
 
+## New Machine Setup
+
+Setting up a new Macbook Pro for development? Check out my [machine setup checklist](NEW_MACHINE_SETUP.md)
+
 ## .zshrc
 `ln -s $(pwd)/.zshrc ~/.zshrc`
 
