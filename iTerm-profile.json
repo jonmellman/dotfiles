@@ -1,10 +1,10 @@
 {
 "Profiles": [
 {
-  "Ansi 5 Color" : {
+  "Ansi 0 Color" : {
     "Green Component" : 0,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527
+    "Red Component" : 0,
+    "Blue Component" : 0
   },
   "Tags" : [
     "Dynamic"
@@ -16,19 +16,6 @@
     "Alpha Component" : 1,
     "Green Component" : 0.50502354122571624
   },
-  "Use Non-ASCII Font" : false,
-  "Right Option Key Sends" : 0,
-  "Bold Color" : {
-    "Green Component" : 1,
-    "Red Component" : 1,
-    "Blue Component" : 1
-  },
-  "Normal Font" : "Ligconsolata-Regular 15",
-  "Ansi 6 Color" : {
-    "Green Component" : 0.73333334922790527,
-    "Red Component" : 0,
-    "Blue Component" : 0.73333334922790527
-  },
   "Link Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -36,13 +23,30 @@
     "Alpha Component" : 1,
     "Green Component" : 0.35916060209274292
   },
+  "Ansi 7 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527
+  },
+  "Bold Color" : {
+    "Green Component" : 1,
+    "Red Component" : 1,
+    "Blue Component" : 1
+  },
+  "AWDS Tab Directory" : "",
+  "Ansi 9 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 1,
+    "Blue Component" : 0.3333333432674408
+  },
+  "Ansi 8 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 0.3333333432674408,
+    "Blue Component" : 0.3333333432674408
+  },
   "Rows" : 25,
   "Default Bookmark" : "No",
-  "Ansi 1 Color" : {
-    "Green Component" : 0,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0
-  },
+  "Custom Directory" : "Recycle",
   "AWDS Tab Option" : "No",
   "Cursor Guide Color" : {
     "Red Component" : 0.70213186740875244,
@@ -80,32 +84,32 @@
   },
   "Working Directory" : "\/Users\/JonathanM",
   "Blinking Cursor" : false,
-  "AWDS Window Option" : "No",
+  "Space" : 0,
   "Sync Title" : false,
   "Prompt Before Closing 2" : false,
   "BM Growl" : true,
   "Command" : "",
-  "Description" : "Default",
+  "AWDS Window Option" : "No",
   "AWDS Pane Directory" : "",
-  "Dynamic Profile Filename" : "\/Users\/home\/Library\/Application Support\/iTerm2\/DynamicProfiles\/iTerm-profile.json",
+  "Description" : "Default",
   "Screen" : -1,
   "Selection Color" : {
     "Green Component" : 0.8353000283241272,
     "Red Component" : 0.70980000495910645,
     "Blue Component" : 1
   },
-  "Disable Window Resizing" : true,
+  "Dynamic Profile Filename" : "\/Users\/home\/Library\/Application Support\/iTerm2\/DynamicProfiles\/iTerm-profile.json",
   "AWDS Window Directory" : "",
   "Only The Default BG Color Uses Transparency" : false,
   "Columns" : 80,
   "Idle Code" : 0,
-  "Mouse Reporting" : true,
+  "Disable Window Resizing" : true,
   "Ansi 13 Color" : {
     "Green Component" : 0.3333333432674408,
     "Red Component" : 1,
     "Blue Component" : 1
   },
-  "Space" : 0,
+  "Mouse Reporting" : true,
   "Custom Command" : "No",
   "ASCII Anti Aliased" : true,
   "Non Ascii Font" : "Monaco 12",
@@ -205,9 +209,17 @@
       "Text" : "[1;5D",
       "Action" : 10
     },
+    "0xf703-0x300000" : {
+      "Action" : 11,
+      "Text" : "05"
+    },
     "0x37-0x40000" : {
       "Text" : "0x1f",
       "Action" : 11
+    },
+    "0xf703-0x2a0000" : {
+      "Action" : 46,
+      "Text" : "1"
     },
     "0x3-0x200000" : {
       "Text" : "0xd",
@@ -217,17 +229,25 @@
       "Text" : "[1;5B",
       "Action" : 10
     },
-    "0xf70b-0x20000" : {
-      "Text" : "[19;2~",
-      "Action" : 10
+    "0xf702-0x300000" : {
+      "Action" : 11,
+      "Text" : "\t01"
     },
     "0xf703-0x220000" : {
-      "Text" : "[1;2C",
-      "Action" : 10
+      "Action" : 46,
+      "Text" : "0"
+    },
+    "0xf702-0x2a0000" : {
+      "Action" : 47,
+      "Text" : "1"
     },
     "0xf739-0x0" : {
       "Text" : "",
       "Action" : 13
+    },
+    "0xf70b-0x20000" : {
+      "Text" : "[19;2~",
+      "Action" : 10
     },
     "0xf728-0x0" : {
       "Text" : "0x4",
@@ -242,8 +262,8 @@
       "Action" : 10
     },
     "0xf702-0x220000" : {
-      "Text" : "[1;2D",
-      "Action" : 10
+      "Action" : 47,
+      "Text" : "0"
     },
     "0x36-0x40000" : {
       "Text" : "0x1e",
@@ -337,6 +357,10 @@
       "Text" : "[23;2~",
       "Action" : 10
     },
+    "0x7a-0x100000" : {
+      "Action" : 11,
+      "Text" : "0x1f"
+    },
     "0x2d-0x200000" : {
       "Text" : "-",
       "Action" : 12
@@ -407,39 +431,35 @@
     "Blue Component" : 0.73333334922790527
   },
   "Transparency" : 0.034745796319796955,
-  "Ansi 0 Color" : {
+  "Guid" : "52D0B7A8-6869-40E9-BD7E-CACEA3FF1A4D",
+  "Ansi 1 Color" : {
     "Green Component" : 0,
-    "Red Component" : 0,
+    "Red Component" : 0.73333334922790527,
     "Blue Component" : 0
   },
-  "Custom Directory" : "Recycle",
   "Ansi 3 Color" : {
     "Green Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0
   },
-  "Guid" : "52D0B7A8-6869-40E9-BD7E-CACEA3FF1A4D",
   "Horizontal Spacing" : 0.9969997176204819,
+  "Ansi 5 Color" : {
+    "Green Component" : 0,
+    "Red Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527
+  },
+  "Use Non-ASCII Font" : false,
+  "Right Option Key Sends" : 0,
+  "Normal Font" : "Ligconsolata-Regular 15",
+  "Ansi 6 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Red Component" : 0,
+    "Blue Component" : 0.73333334922790527
+  },
   "Ansi 2 Color" : {
     "Green Component" : 0.73333334922790527,
     "Red Component" : 0,
     "Blue Component" : 0
-  },
-  "Ansi 7 Color" : {
-    "Green Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527
-  },
-  "AWDS Tab Directory" : "",
-  "Ansi 9 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 1,
-    "Blue Component" : 0.3333333432674408
-  },
-  "Ansi 8 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 0.3333333432674408,
-    "Blue Component" : 0.3333333432674408
   },
   "Ansi 4 Color" : {
     "Red Component" : 0.45208740234375,
