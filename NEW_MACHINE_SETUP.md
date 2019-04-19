@@ -9,15 +9,12 @@ So you got a new computer or lost your old settings. How do you set up your stuf
         * Note: If you have issues with Spectacle and Flycut hotkeys clashing, you can disable Spectactle when Flycut is focused.
     - [ ] [Rebind caps lock to escape](https://stackoverflow.com/a/40254864)
     - [ ] Accessibility > enable "scroll gesture with modifier keys to zoom"
-    - [ ] Install font [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf). This is [Inconsolata](https://fonts.google.com/specimen/Inconsolata?selection.family=Inconsolata), but with ligatures.
+    - [ ] Install font [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf). This is [Inconsolata](https://fonts.google.com/specimen/Inconsolata?selection.family=Inconsolata) but with ligatures.
     - [ ] Better touchbar: https://github.com/niw/HapticKey
     - [ ] Install Homebrew: https://brew.sh/
 - [ ] Editor setup
     - [ ] Install VS Code
-    - [ ] Download snippets
-    - [ ] Download keybindings 
     - [ ] Download extensions
-    - [ ] Set font to "Ligconsolata"
 - [ ] Terminal setup
     - [ ] Install [iTerm2](https://www.iterm2.com/)
     - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -31,6 +28,3 @@ So you got a new computer or lost your old settings. How do you set up your stuf
 - [ ] NodeJS setup
     - [ ] Install [nvm](https://github.com/creationix/nvm)
     - [ ] Install the latest stable version of Node: `nvm install --lts`
-- [ ] Download LastPass
-- [ ] Set up Chrome
-    - [ ] Settings > Manage Search Engines
