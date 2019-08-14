@@ -1,9 +1,9 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     // Terminal focus toggle: https://stackoverflow.com/a/43012779/6215238
-    { "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
+    { "key": "cmd+Escape", "command": "workbench.action.terminal.focus"},
     {
-        "key": "ctrl+`",
+        "key": "cmd+Escape",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
@@ -46,11 +46,6 @@
     {
         "key": "alt+cmd+left",
         "command": "-workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "backspace ctrl+",
-        "command": "workbench.action.terminal.resizePaneLeft",
         "when": "terminalFocus"
     },
     {
