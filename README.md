@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains the settings, preferences, and tools I've come to rely on after using a Macbook Pro for NodeJS development for over 5 years.
+This repository documents the settings, preferences, and tools I've come to rely on after using a Macbook Pro for over 5 years. My configurations are primarily for NodeJS development, but I dip my toes elsewhere as well.
 
 ## New Machine Setup
 
@@ -35,4 +35,13 @@ Note that you should backup and move each of the target files before symlinking 
 ln -s $(pwd)/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s $(pwd)/VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s $(pwd)/VSCode/snippets/javascript.json ~/Library/Application\ Support/Code/User/snippets/javascript.json
+```
+
+## .gitignore_global
+
+As per http://egorsmirnov.me/2015/05/04/global-gitignore-file.html:
+
+```sh
+ln -s $(pwd)/.gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 ```
