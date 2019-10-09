@@ -17,5 +17,11 @@
     "editor.formatOnPaste": true,
     "files.associations": {
         "*.jenkinsfile": "groovy"
-    }
+    },
+    "cSpell.userWords": [
+        "Velostat",
+        "hackathon",
+        "println"
+    ],
+    "arduino.logLevel": "info"
 }
