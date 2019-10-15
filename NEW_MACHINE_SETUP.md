@@ -15,6 +15,7 @@ So you got a new computer or lost your old settings. How do you set up your stuf
 - [ ] Editor setup
     - [ ] Install VS Code
     - [ ] Download extensions
+    - [ ] Install Sublime Text and [Afterglow theme](https://github.com/YabataDesign/afterglow-theme)
 - [ ] Terminal setup
     - [ ] Install [iTerm2](https://www.iterm2.com/)
     - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
