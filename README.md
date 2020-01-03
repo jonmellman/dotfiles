@@ -34,7 +34,9 @@ Note that you should backup and move each of the target files before symlinking 
 ```sh
 ln -sf $(pwd)/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -sf $(pwd)/VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -sf $(pwd)/VSCode/snippets/javascript.json ~/Library/Application\ Support/Code/User/snippets/javascript.json
+
+# Remove snippets/ before symlinking - necessary for directories.
+rm -rf ~/Library/Application\ Support/Code/User/snippets && ln -sf $(pwd)/VSCode/snippets ~/Library/Application\ Support/Code/User/snippets
 ```
 
 ## .gitignore_global
