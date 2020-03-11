@@ -1,4 +1,4 @@
-So you got a new computer or lost your old settings. How do you set up your stuff like Jon!?
+So you got a new computer or lost your old settings. Here's how I configure my machines for my development workflow.
 
 - [ ] System setup
     - [ ] [Optimize system key repeat](https://apple.stackexchange.com/a/83923)
