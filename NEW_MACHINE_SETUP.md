@@ -1,9 +1,9 @@
-So you got a new computer or lost your old settings. How do you set up your stuff like Jon!?
+So you got a new computer or lost your old settings. Here's how I configure my machines for my development workflow.
 
 - [ ] System setup
     - [ ] [Optimize system key repeat](https://apple.stackexchange.com/a/83923)
      and trackpad tracking speed
-    - [ ] Hide dock and update animation speed
+    - [ ] [Hide dock and update animation speed](https://www.idownloadblog.com/2015/02/14/auto-hide-dock-no-delay-mac/)
     - [ ] Install [Spectacle](https://www.spectacleapp.com/) for window management
     - [ ] Install [Flycut](https://itunes.apple.com/us/app/flycut-clipboard-manager/id442160987?mt=12) for clipboard management
         * Note: If you have issues with Spectacle and Flycut hotkeys clashing, you can disable Spectactle when Flycut is focused.
@@ -15,6 +15,7 @@ So you got a new computer or lost your old settings. How do you set up your stuf
 - [ ] Editor setup
     - [ ] Install VS Code
     - [ ] Download extensions
+    - [ ] Install Sublime Text and [Afterglow theme](https://github.com/YabataDesign/afterglow-theme)
 - [ ] Terminal setup
     - [ ] Install [iTerm2](https://www.iterm2.com/)
     - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)

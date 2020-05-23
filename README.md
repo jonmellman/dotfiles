@@ -7,7 +7,7 @@ This repository documents the settings, preferences, and tools I've come to rely
 Setting up a new Macbook Pro for development? Check out my [machine setup checklist](NEW_MACHINE_SETUP.md)
 
 ## .zshrc
-`ln -s $(pwd)/.zshrc ~/.zshrc`
+`ln -sf $(pwd)/.zshrc ~/.zshrc`
 
 ## iTerm2 Settings
 
@@ -32,9 +32,11 @@ You may need to restart iTerm.
 Note that you should backup and move each of the target files before symlinking over them.
 
 ```sh
-ln -s $(pwd)/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s $(pwd)/VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s $(pwd)/VSCode/snippets/javascript.json ~/Library/Application\ Support/Code/User/snippets/javascript.json
+ln -sf $(pwd)/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sf $(pwd)/VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
+# Remove snippets/ before symlinking - necessary for directories.
+rm -rf ~/Library/Application\ Support/Code/User/snippets && ln -sf $(pwd)/VSCode/snippets ~/Library/Application\ Support/Code/User/snippets
 ```
 
 ## .gitignore_global
