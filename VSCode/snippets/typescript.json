@@ -12,6 +12,14 @@
 	//  ],
 	//  "description": "Log output to console"
 	// }
+	"sleep": {
+		"prefix": "sleep",
+		"body": "await new Promise(resolve => setTimeout(resolve, 10_000))"
+	}
+	"TODO comment": {
+		"prefix": "// TODO",
+		"body": "// TODO: @jonm to do in upcoming PR"
+	},
 	"console.log": {
 		"prefix": "cl",
 		"body": [
