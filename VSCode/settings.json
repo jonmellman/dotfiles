@@ -1,27 +1,53 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "search.location": "panel",
-    "window.zoomLevel": 0,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.tabSize": 4,
-    "editor.insertSpaces": false,
-    "files.trimTrailingWhitespace": true,
-    "editor.fontFamily": "Ligconsolata,Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 15,
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontSize": 14,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "editor.formatOnPaste": true,
-    "files.associations": {
-        "*.jenkinsfile": "groovy"
-    },
-    "cSpell.userWords": [
-        "Velostat",
-        "hackathon",
-        "println"
-    ],
-    "arduino.logLevel": "info"
+  "workbench.startupEditor": "newUntitledFile",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontFamily": "Ligconsolata, Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Ligconsolata, 'Inconsolata Bold', Menlo, Monaco, 'Courier New', monospace",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.formatOnPaste": true,
+  "files.associations": {
+    "*.jenkinsfile": "groovy"
+  },
+  "cSpell.userWords": ["Velostat", "hackathon", "println"],
+  "arduino.logLevel": "info",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.stickyScroll.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools",
+    "editor.formatOnSave": false
+  },
+  "sqltools.results.reuseTabs": "never",
+  "redhat.telemetry.enabled": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
