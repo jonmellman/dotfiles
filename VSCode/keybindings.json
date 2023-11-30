@@ -95,5 +95,13 @@
     {
         "key": "ctrl+shift+cmd+t",
         "command": "editor.action.goToTypeDefinition"
-    }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "insertDateString.insertDate"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "gitlens.copyRemoteFileUrlToClipboard"
+    },
 ]

@@ -61,8 +61,8 @@ function clip {
 }
 
 # Auto-load nvm node version on directory change
-autoload -U add-zsh-hook
-add-zsh-hook chpwd load-nvmrc
+# autoload -U add-zsh-hook
+# add-zsh-hook chpwd load-nvmrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

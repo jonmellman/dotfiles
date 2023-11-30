@@ -25,7 +25,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -35,7 +34,8 @@
   "workbench.iconTheme": "vscode-icons",
   "[sql]": {
     "editor.defaultFormatter": "mtxr.sqltools",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
   },
   "sqltools.results.reuseTabs": "never",
   "redhat.telemetry.enabled": false,
@@ -43,11 +43,41 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
+    "*": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
   },
   "security.workspace.trust.untrustedFiles": "open",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnPaste": false
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "pasteAndIndent.selectAfter": true,
+  "python.formatting.provider": "black",
+  "[terraform]": { "editor.formatOnSave": true },
+  "[terraform-vars]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "leetcode.workspaceFolder": "/Users/home/.leetcode",
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.defaultLanguage": "typescript",
+  "leetcode.hint.commentDescription": false,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "raspberrypi.local": "linux"
+  }
 }
