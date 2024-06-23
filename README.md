@@ -2,12 +2,24 @@
 
 This repository documents the settings, preferences, and tools I've come to rely on after using a Macbook Pro for over 5 years. My configurations are primarily for NodeJS development, but I dip my toes elsewhere as well.
 
+## Submodule setup
+
+This repo contains git submodules. After cloning, you must initialize them separately:
+```sh
+git submodule update --init
+```
+
 ## New Machine Setup
 
 Setting up a new Macbook Pro for development? Check out my [machine setup checklist](NEW_MACHINE_SETUP.md)
 
 ## .zshrc
 `ln -sf $(pwd)/.zshrc ~/.zshrc`
+
+## fzf-git
+```sh
+git clone https://github.com/junegunn/fzf-git.sh.git
+```
 
 ## iTerm2 Settings
 
