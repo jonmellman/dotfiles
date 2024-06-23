@@ -1,1 +1,11 @@
-/Users/home/code/dotfiles/.gitconfig
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = PLACEHOLDER
+	email = PLACEHOLDER
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[core]
+	excludesfile = /Users/home/.gitignore_global
+[alias]
+	co = checkout
