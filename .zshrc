@@ -60,11 +60,8 @@ function clip {
 	[ -t 0 ] && pbpaste || pbcopy;
 }
 
-# Auto-load nvm node version on directory change
-# autoload -U add-zsh-hook
-# add-zsh-hook chpwd load-nvmrc
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fzf key bindings and completions
+source <(fzf --zsh)
 
 # Load fzf-git zsh widgets
 source $HOME/.config/yadm/fzf-git.sh/fzf-git.sh
@@ -72,25 +69,18 @@ source $HOME/.config/yadm/fzf-git.sh/fzf-git.sh
 # Add CMake as per https://stackoverflow.com/a/52050161
 PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 
-# https://docs.conda.io/en/latest/miniconda.html
-# PATH="$HOME/miniconda3/bin:$PATH" # Commented out because there are binaries I don't want to load from conda, like sqlite3
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/Users/home/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/Users/home/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/Users/home/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/Users/home/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
-
-
+# Load directory's node version automatically
 eval "$(fnm env --use-on-cd)"
+
+
+unalias ll
+ll() {
+  local dir="${1:-.}"
+  lsd -al --color=always "$dir" | \
+    tail -n +3 | fzf --header="$(pwd)/$1" --ansi --multi --reverse --height=80% \
+    --preview='file=$(echo {} | awk "{print \$NF}"); if [ -d "$file" ]; then lsd -al "$file"; else head -n 20 "$file"; fi' | awk '{print $NF}' | paste -sd ' ' -
+}
+
 
 alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
 
