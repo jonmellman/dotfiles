@@ -1,3 +1,17 @@
+# OSX
 .DS_Store
+
+# VSCode
 .vscode/
+
+# Python
+.venv
 *.pyc
+
+# Experiments
+*/experiment.ts
+experiments/*
+**/experiments/*
+
+# SQL session files
+*.session.sql

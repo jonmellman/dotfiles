@@ -66,6 +66,9 @@ function clip {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Load fzf-git zsh widgets
+source $HOME/.config/yadm/fzf-git.sh/fzf-git.sh
+
 # Add CMake as per https://stackoverflow.com/a/52050161
 PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 
@@ -96,19 +99,20 @@ DISABLE_UPDATE_PROMPT=true
 
 
 # https://github.com/pyenv/pyenv/issues/1853#issuecomment-847827280
-if [[ $(arch) != arm64* ]]
-then
-	eval "$(/usr/local/bin/brew shellenv)"
-	export PYENV_ROOT="$HOME/.pyenv-x86"
-else
-	# PATH="$PATH":/opt/homebrew/bin/
-	eval "$(/opt/homebrew/bin/brew shellenv)"
-	# default PYENV_ROOT => $HOME/.pyenv
+if [[ $(uname -m) == 'arm64' ]]; then
+  echo M1
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ $(uname -m) == 'x86_64' ]]; then
+  echo x86
+  eval "$(/usr/local/bin/brew shellenv)"
+#   export PYENV_ROOT="$HOME/.pyenv-x86"
 fi
+alias brew86="arch -x86_64 /usr/local/bin/brew"
 
 # Created by `pipx` on 2024-06-02 01:24:36
 export PATH="$PATH:/Users/home/.local/bin"
 
-source $HOME/.config/yadm/fzf-git.sh/fzf-git.sh
-
 export EDITOR="code -w"
+
+alias zshm1='env /usr/bin/arch -arm64 /bin/zsh --login'
+alias zshx86='env /usr/bin/arch -x86_64 /bin/zsh --login'
