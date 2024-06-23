@@ -108,5 +108,5 @@ alias zshm1='env /usr/bin/arch -arm64 /bin/zsh --login'
 alias zshx86='env /usr/bin/arch -x86_64 /bin/zsh --login'
 
 # Syntax highlighting and completions must be last
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
