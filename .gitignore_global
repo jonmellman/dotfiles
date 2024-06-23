@@ -1,1 +1,3 @@
-/Users/home/code/dotfiles/.gitignore_global
+.DS_Store
+.vscode/
+*.pyc
