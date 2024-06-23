@@ -12,3 +12,21 @@ yadm submodule update --init
 - [ ] Terminal setup
     - [ ] Install [fzf and enable fuzzy completions](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
     - [ ] Set font to [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf)
+
+## iTerm2 Settings
+
+These iTerm2 settings come with nice colors and hotkeys.
+
+Hotkeys for more natural text manipulation include:
+* `⌘Z` - Undo
+* `⌘←Delete` - Delete everything before cursor
+* `⌥←Delete` - Delete first word before cursor
+* `⌥←`, `⌥→`  - Jump cursor to previous/next word
+* `⌘←`, `⌘→`  - Jump cursor to start/end of line
+
+To install:
+1. Go to iTerm > Preference.
+2. Check "Load Preferences from a custom folder or URL"
+3. Paste this URL: https://raw.githubusercontent.com/jonmellman/dotfiles/main/com.googlecode.iterm2.plist
+
+You may need to restart iTerm.
