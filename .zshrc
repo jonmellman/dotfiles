@@ -90,4 +90,25 @@ PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 eval "$(fnm env --use-on-cd)"
 
 alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
-#compdef gt
+
+# Tell oh-my-zsh to update automatically: https://stackoverflow.com/a/25876379
+DISABLE_UPDATE_PROMPT=true
+
+
+# https://github.com/pyenv/pyenv/issues/1853#issuecomment-847827280
+if [[ $(arch) != arm64* ]]
+then
+	eval "$(/usr/local/bin/brew shellenv)"
+	export PYENV_ROOT="$HOME/.pyenv-x86"
+else
+	# PATH="$PATH":/opt/homebrew/bin/
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	# default PYENV_ROOT => $HOME/.pyenv
+fi
+
+# Created by `pipx` on 2024-06-02 01:24:36
+export PATH="$PATH:/Users/home/.local/bin"
+
+source $HOME/.config/yadm/fzf-git.sh/fzf-git.sh
+
+export EDITOR="code -w"
