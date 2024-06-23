@@ -91,3 +91,58 @@ eval "$(fnm env --use-on-cd)"
 
 alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
 #compdef gt
+
+# Tell oh-my-zsh to update automatically: https://stackoverflow.com/a/25876379
+DISABLE_UPDATE_PROMPT=true
+export AIRFLOW_HOME=~/code/airflow_home
+
+
+# eval "$(/usr/local/bin/brew shellenv)" on Intel
+
+
+# https://github.com/pyenv/pyenv/issues/1853#issuecomment-847827280
+if [[ $(arch) != arm64* ]]
+then
+	eval "$(/usr/local/bin/brew shellenv)"
+	export PYENV_ROOT="$HOME/.pyenv-x86"
+else
+	# PATH="$PATH":/opt/homebrew/bin/
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	# default PYENV_ROOT => $HOME/.pyenv
+fi
+
+# Created by `pipx` on 2024-06-02 01:24:36
+export PATH="$PATH:/Users/home/.local/bin"
+
+
+# fzf_git_add_insert() {
+#   local file
+#   file=$(git status -s | fzf --height 40% --layout=reverse | awk '{print $2}')
+#   if [[ -n $file ]]; then
+#     LBUFFER+=$file
+#   fi
+# }
+# zle -N fzf_git_add_insert
+# bindkey '^G' fzf_git_add_insert
+
+# fzf_git_add_insert() {
+#   local files
+#   files=$(git -c color.status=always status --short | fzf --ansi --multi --height=40% --layout=reverse --border | awk '{print $2}' | tr '\n' ' ')
+#   if [[ -n $files ]]; then
+#     LBUFFER+=$files
+#   fi
+# }
+# zle -N fzf_git_add_insert
+# bindkey '^G' fzf_git_add_insert
+
+
+# function prepend-sudo {
+#   if [[ $BUFFER != "sudo "* ]]; then
+#     BUFFER="sudo $BUFFER"; CURSOR+=5
+#   fi
+# }
+# zle -N prepend-sudo
+# bindkey '^G' prepend-sudo
+source /Users/home/code/fzf-test/fzf-git.sh
+
+export EDITOR="code -w"

@@ -29,7 +29,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
   },
   "workbench.iconTheme": "vscode-icons",
   "[sql]": {
@@ -52,13 +52,11 @@
   "security.workspace.trust.untrustedFiles": "open",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnType": true,
     "editor.formatOnSaveMode": "file",
-    "editor.formatOnPaste": false
+    "editor.formatOnPaste": true
   },
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSaveMode": "file",
   "pasteAndIndent.selectAfter": true,
   "python.formatting.provider": "black",
   "[terraform]": { "editor.formatOnSave": true },
@@ -79,5 +77,7 @@
   "remote.SSH.useLocalServer": false,
   "remote.SSH.remotePlatform": {
     "raspberrypi.local": "linux"
-  }
+  },
+  "notebook.formatOnSave.enabled": true,
+  "terminal.integrated.macOptionIsMeta": true
 }

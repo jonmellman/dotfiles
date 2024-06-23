@@ -17,9 +17,7 @@ Setting up a new Macbook Pro for development? Check out my [machine setup checkl
 `ln -sf $(pwd)/.zshrc ~/.zshrc`
 
 ## fzf-git
-```sh
-git clone https://github.com/junegunn/fzf-git.sh.git
-```
+`ln -sf $(pwd)/.zshrc ~/.zshrc`
 
 ## iTerm2 Settings
 

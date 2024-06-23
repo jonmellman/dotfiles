@@ -9,3 +9,5 @@
 	excludesfile = /Users/home/.gitignore_global
 [alias]
 	co = checkout
+[init]
+	defaultBranch = main
