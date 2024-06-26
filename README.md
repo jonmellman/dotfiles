@@ -11,7 +11,6 @@ yadm submodule update --init
     - [ ] Accessibility > enable "scroll gesture with modifier keys to zoom"
 - [ ] Terminal setup
     - [ ] Install [fzf and enable fuzzy completions](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
-    - [ ] Set font to [Ligconsolata](https://github.com/googlefonts/Inconsolata/tree/master/fonts/otf)
 
 ## iTerm2 Settings
 
