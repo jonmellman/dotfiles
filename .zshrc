@@ -6,7 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +92,12 @@ alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
 # Tell oh-my-zsh to update automatically: https://stackoverflow.com/a/25876379
 DISABLE_UPDATE_PROMPT=true
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# atuin - shell history
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
 
 # https://github.com/pyenv/pyenv/issues/1853#issuecomment-847827280
 if [[ $(uname -m) == 'arm64' ]]; then
@@ -149,3 +156,4 @@ eval "$(direnv hook zsh)"
 # Syntax highlighting and completions must be last
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste) # https://github.com/zsh-users/zsh-autosuggestions/issues/511#issuecomment-1005375484
