@@ -7,6 +7,7 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = ~/.gitignore_global
+	pager = delta
 [init]
 	defaultBranch = main
 [push]
@@ -16,3 +17,9 @@
 	co = checkout
 [pull]
 	rebase = false
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3
