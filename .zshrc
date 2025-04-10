@@ -86,6 +86,8 @@ ll() {
     paste -sd ' ' -
 }
 
+alias hl="rg --passthru --colors 'match:fg:yellow'"
+
 
 alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
 
@@ -123,7 +125,8 @@ alias zshx86='env /usr/bin/arch -x86_64 /bin/zsh --login'
 #
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 export PYENV_ROOT="/Users/jonathan/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 alias brew86="arch -x86_64 /usr/local/bin/brew"
 export PATH="$HOME/.local/bin:$PATH"
@@ -157,3 +160,13 @@ eval "$(direnv hook zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste) # https://github.com/zsh-users/zsh-autosuggestions/issues/511#issuecomment-1005375484
+
+
+# export SSLKEYLOGFILE=~/ssl_logs/sslkeylogfile.log
+
+
+# export REQUESTS_CA_BUNDLE=~/.proxyman/proxyman-ca.pem
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
