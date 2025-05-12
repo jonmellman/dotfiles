@@ -1,0 +1,66 @@
+#!/bin/sh
+# vim: set ft=sh sw=2 et :
+
+install_brew() {
+  # Proudly borrowed from:
+  # https://github.com/duckfullstop/dotfiles/blob/f734eea399a7ccd1c25b57242997e79f230abc4d/.config/yadm/bootstrap
+
+  # install Homebrew if it's missing
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  fi
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating Homebrew bundle"
+    brew bundle --global
+  fi
+}
+
+configure_macos() {
+  defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+  defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+  # Enable Dock autohide
+  defaults write com.apple.dock autohide -bool true
+  defaults write com.apple.dock autohide-delay -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0 && killall Dock
+
+  # # Disable Ctrl+Arrow mapping for Mission Control as it's more useful for jumping words in a terminal
+  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 79 "{enabled = 0; value = { parameters = (65535, 123, 8650752); type = standard;};}"
+  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 80 "{enabled = 0; value = { parameters = (65535, 123, 8781824); type = standard;};}"
+  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 81 "{enabled = 0; value = { parameters = (65535, 124, 8650752); type = standard;};}"
+  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 82 "{enabled = 0; value = { parameters = (65535, 124, 8781824); type = standard;};}"
+}
+
+configure_zsh() {
+  if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+    info "Installing oh-my-zsh...\n"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  else
+    success "oh-my-zsh is already installed\n"
+  fi
+
+  # FIXME: We deserve better
+  source $HOME/.zshrc
+}
+
+init_submodules() {
+  # Because Git submodule commands cannot operate without a work tree, they must
+  # be run from within $HOME (assuming this is the root of your dotfiles)
+  # cd "$HOME"
+
+  echo "Init submodules"
+  yadm submodule update --init
+}
+
+system_type=$(uname -s)
+
+
+if [ "$system_type" = "Darwin" ]; then
+  install_brew
+  configure_macos
+fi
+
+init_submodules
+configure_zsh

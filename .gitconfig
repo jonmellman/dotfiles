@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Jon Mellman
-	email = jon.mellman@afreshtechnologies.com
+	email = jonmellman@gmail.com
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [core]
