@@ -86,6 +86,8 @@ ll() {
     paste -sd ' ' -
 }
 
+alias hl="rg --passthru --colors 'match:fg:yellow'"
+
 
 alias fbr="git co \`git branch --sort=-committerdate | fzf\`"
 
@@ -118,7 +120,53 @@ export EDITOR="code -w"
 alias zshm1='env /usr/bin/arch -arm64 /bin/zsh --login'
 alias zshx86='env /usr/bin/arch -x86_64 /bin/zsh --login'
 
+#
+# BEGIN AFRESH-SPECIFIC CONFIG
+#
+export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+export PYENV_ROOT="/Users/jonathan/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+alias brew86="arch -x86_64 /usr/local/bin/brew"
+export PATH="$HOME/.local/bin:$PATH"
+
+export KUBECONFIG=$HOME/.kube/aks-config
+
+refresh_k8s() {
+  rm -f "${KUBECONFIG}"
+	for cluster group in $(az aks list --query "[].[name,resourceGroup]" -o tsv)
+	do
+		az aks get-credentials \
+			--resource-group "${group}" \
+			--name "${cluster}" \
+			--overwrite-existing \
+			--file "${KUBECONFIG}"
+	done
+  kubelogin convert-kubeconfig -l azurecli
+}
+
+# (Optional) Set up autocomplete for `kubectl`
+# See https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete
+source <(kubectl completion zsh)
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+eval "$(direnv hook zsh)"
+
+#
+# END AFRESH-SPECIFIC CONFIG
+#
+
 # Syntax highlighting and completions must be last
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste) # https://github.com/zsh-users/zsh-autosuggestions/issues/511#issuecomment-1005375484
+
+
+# export SSLKEYLOGFILE=~/ssl_logs/sslkeylogfile.log
+
+
+# export REQUESTS_CA_BUNDLE=~/.proxyman/proxyman-ca.pem
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
